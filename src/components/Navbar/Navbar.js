@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <div className="portfolio__navbar gradient__bg">
-      <div className="portfolio__navbar-links">
+      <div className="portfolio__navbar-links container">
         <div className="portfolio__navbar-links_logo">
           <h3>MN</h3>
         </div>
@@ -25,10 +25,11 @@ const Navbar = () => {
             <a href="#contact">Contact</a>
           </p>
         </div>
+        <div className="portfolio__navbar-resume">
+          <button type="button">Resume</button>
+        </div>
       </div>
-      <div className="portfolio__navbar-resume">
-        <button type="button">Resume</button>
-      </div>
+
       <div className="portfolio__navbar-menu">
         {toggleMenu ? (
           <RiCloseLine
@@ -60,7 +61,7 @@ const Navbar = () => {
               </p>
             </div>
             <div className="portfolio__navbar-menu_container-links-resume">
-              <button type="button">resume</button>
+              <button type="button">Resume</button>
             </div>
           </div>
         )}

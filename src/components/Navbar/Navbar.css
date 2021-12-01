@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 2rem 6rem;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
 }
 
 .portfolio__navbar-links {
@@ -16,6 +18,10 @@
 .portfolio__navbar-links_logo {
   margin-right: auto;
   color: #ffffff;
+  font-size: 20px;
+  border: var(--color-text) 2px dotted;
+  border-radius: 45px;
+  padding: 18px 12px;
 }
 
 .portfolio__navbar-links_container {
@@ -28,6 +34,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-left: 5rem;
+  cursor: pointer;
 }
 
 .portfolio__navbar-links_container p,
@@ -74,6 +81,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
+  z-index: 99;
 
   text-align: end;
   background: var(--color-footer);
@@ -93,9 +101,13 @@
 
 .portfolio__navbar-menu_container-links-resume {
   display: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1050px) {
+  .portfolio__navbar {
+    position: relative;
+  }
   .portfolio__navbar-links_container {
     display: none;
   }
@@ -107,6 +119,7 @@
 
 @media screen and (max-width: 700px) {
   .portfolio__navbar {
+    position: relative;
     padding: 2rem 4rem;
   }
 }
