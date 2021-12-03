@@ -6,24 +6,24 @@ import './header.css';
 
 const Header = () => {
   return (
-    <div className="portfolio__header">
-      <div className="portfolio__header-content">
+    <div className="portfolio__header" id="home">
+      <div className="portfolio__header-content scale-up-center">
         <div>
           <h2>Hello, I'm Mohamed Nasr</h2>
-          <h1 className="gradient__text">I'm a Front-End web developer</h1>
+          <h1 className="gradient__text">I'm a Front-End Web Developer</h1>
           <FaGithub
             className="portfolio__header-content__icon"
-            color="#fff"
+            color="#81afdd"
             size="42"
           />
           <FaLinkedinIn
             className="portfolio__header-content__icon"
-            color="#0e76a8"
+            color="#81afdd"
             size="42"
           />
           <FaTwitter
             className="portfolio__header-content__icon"
-            color="#00acee"
+            color="#81afdd"
             size="42"
           />
         </div>
@@ -31,6 +31,7 @@ const Header = () => {
       <Particles
         id="tsparticles"
         options={{
+          fullScreen: { enable: false },
           fpsLimit: 60,
           interactivity: {
             events: {

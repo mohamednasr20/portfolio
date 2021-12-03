@@ -7,7 +7,8 @@
   );
 
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 110px);
+  width: 100%;
 }
 
 #tsparticles {
@@ -15,23 +16,26 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 }
 
 .portfolio__header-content {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9;
+  /* z-index: 8; */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   margin: auto;
+  transform: translateY(-90px);
 }
 
 .portfolio__header-content h1 {
   font-family: var(--font-family);
+  color: var(--color-subtext);
   font-weight: 800;
   font-size: 62px;
   line-height: 75px;

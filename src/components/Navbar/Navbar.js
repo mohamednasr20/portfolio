@@ -7,9 +7,9 @@ const Navbar = () => {
 
   return (
     <div className="portfolio__navbar gradient__bg">
-      <div className="portfolio__navbar-links container">
+      <div className="portfolio__navbar-links container scale-up-center">
         <div className="portfolio__navbar-links_logo">
-          <h3>MN</h3>
+          <h3 className="gradient__text">MN</h3>
         </div>
         <div className="portfolio__navbar-links_container">
           <p>
