@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { projectsList } from '../projectsList';
+import { projectsData } from './projectsData';
 
 const ProjectDetailes = ({ id }) => {
-  const { description, title, imgUrl } = projectsList.find(
+  const { description, title, imgUrl } = projectsData.find(
     (project) => project.id === id
   );
   console.log(description);
@@ -30,7 +30,7 @@ const ProjectDetailes = ({ id }) => {
           </motion.div>
 
           <motion.div className="content-container" animate>
-            <h2 className="gradient__text">{title}</h2>
+            <h3 className="gradient__text">{title}</h3>
 
             <p>{description}</p>
           </motion.div>

@@ -1,11 +1,19 @@
-import screenshot1 from '../../assests/screenshot1.png';
-export const projectsList = [
-  {
-    id: '1',
-    title: 'Oval Real Estate',
-    description:
-      'Real Estate website for buying and selling houses Any user can search for properties and see any property detailes registerd users only can save searches and save properties.',
-    imgUrl: screenshot1,
-    technology: ['React', 'Redux', 'Mui', 'Firebase'],
-  },
-];
+import React from 'react';
+import { projectsData } from './projectsData';
+import ProjectCard from './ProjectCard';
+
+const List = ({ selectedId }) => {
+  return (
+    <ul className="card-list">
+      {projectsData.map((card) => (
+        <ProjectCard
+          key={card.id}
+          {...card}
+          isSelected={card.id === selectedId}
+        />
+      ))}
+    </ul>
+  );
+};
+
+export default List;
