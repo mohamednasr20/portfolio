@@ -1,165 +1,85 @@
 .portfolio__projects {
-  padding-top: 6rem;
+  padding: 4rem;
 }
 
-.portfolio__projects h2 {
+.portfolio__projects h3 {
+  color: var(--green);
   font-size: 45px;
   font-weight: 800;
   font-family: var(--font-family);
   margin-bottom: 4rem;
 }
 
-.card-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: flex-start;
+.portfolio__projects-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
-.card {
-  position: relative;
-  height: 350px;
-  flex: 0 0 49%;
-  max-width: 49%;
+.portfolio__project {
+  background: var(--light-navy);
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.card-content-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: block;
-  pointer-events: none;
-}
-
-.card-content-container.open {
-  top: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  z-index: 99;
-  overflow: hidden;
-}
-
-.card-content {
-  pointer-events: auto;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.open .card-content {
-  padding: 0 20px;
-  height: auto;
-  max-width: 700px;
-  overflow: hidden;
-  background: var(--color-footer);
-  pointer-events: none;
-}
-
-.card-open-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.card-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+.portfolio__project-img {
+  height: 230px;
   width: 100%;
 }
 
-.card-image-container img {
+.portfolio__project-img img {
+  height: 230px;
   width: 100%;
-  height: 100%;
+  border-radius: 15px;
   object-fit: contain;
+  object-position: 50% 50%;
 }
 
-.open .card-image-container img {
-  height: 400px;
+.portfolio__project-content {
+  color: var(--lightest-slate);
+  padding: 1rem 2rem;
 }
 
-.open .card-image-container,
-.open .title-container {
-  z-index: 9;
+.portfolio__project-content h4 {
+  color: var(--slate);
+  font-size: 24px;
 }
 
-.title-container {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  max-width: 300px;
+.portfolio__project-content p {
+  margin: 1rem 0;
 }
 
-h3 {
-  margin: 8px 0;
+.portfolio__project-content ul {
+  display: flex;
+  margin-bottom: 2rem;
 }
 
-.overlay {
-  z-index: 8;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.8);
-  will-change: opacity;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 990px;
+.portfolio__project-content li {
+  margin-right: 1rem;
 }
 
-.overlay a {
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  left: 50%;
-
-  transform: translateX(-50%);
+.portfolio__project-content a {
+  margin-right: 30px;
 }
 
-.content-container {
-  padding: 460px 35px 35px 0;
-  max-width: 700px;
-  width: 90vw;
-}
+@media screen and (max-width: 1050px) {
+  .portfolio__projects {
+    padding: 6rem;
+  }
+  .portfolio__projects-showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-p {
-  color: var(--color-text);
-  font-size: 20px;
-  line-height: 28px;
-}
-
-@media only screen and (max-width: 800px) {
-  .card {
-    flex: 0 0 50%;
-    max-width: 50%;
+  .portfolio__project {
+    margin-top: 2rem;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .card {
-    flex: 1 0 100%;
-    max-width: 100%;
-    padding: 10px;
-    padding-left: 0;
-    padding-right: 0;
+@media screen and (max-width: 700px) {
+  .portfolio__projects {
+    padding: 2rem;
   }
-
-  .card:nth-child(4n + 1),
-  .card:nth-child(4n + 4) {
-    flex: 1 0 100%;
-    max-width: 100%;
-  }
-
-  .card-content-container.open {
-    padding: 0;
+  .portfolio__projects-showcase {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
