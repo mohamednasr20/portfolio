@@ -1,6 +1,7 @@
 import React from 'react';
 import { projectsData } from './projectsData';
-import { AiFillCheckCircle } from 'react-icons/ai';
+import { AiFillCheckCircle, AiFillGithub } from 'react-icons/ai';
+import { BiLinkExternal } from 'react-icons/bi';
 
 import './projects.css';
 
@@ -25,8 +26,12 @@ const Projects = () => {
                 ))}
               </ul>
               <div>
-                <a href="">View Code</a>
-                <a href="">Visit Site</a>
+                <a href={project.codeLink} target="_blank" rel="noreferrer">
+                  <AiFillGithub size="35" title="github-icon" />
+                </a>
+                <a href={project.liveLink} target="_blank" rel="noreferrer">
+                  <BiLinkExternal size="35" title="external-link-icon" />
+                </a>
               </div>
             </div>
           </div>
