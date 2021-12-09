@@ -11,7 +11,7 @@ const Projects = () => {
       <h3>Some Things I’ve Built</h3>
       <div className="portfolio__projects-showcase ">
         {projectsData.map((project) => (
-          <div className="portfolio__project">
+          <div key={project.id} className="portfolio__project">
             <div className="portfolio__project-img">
               <img src={project.imgUrl} alt="screenshot" />
             </div>
@@ -19,8 +19,8 @@ const Projects = () => {
               <h4>{project.title}</h4>
               <p>{project.description}</p>
               <ul>
-                {project.technology.map((t) => (
-                  <li>
+                {project.technology.map((t, i) => (
+                  <li key={i}>
                     <AiFillCheckCircle color="#64ffda" size="18" /> {t}
                   </li>
                 ))}
