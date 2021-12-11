@@ -1,43 +1,44 @@
 import React from 'react';
+import Project from './Project/Project';
 import { projectsData } from './projectsData';
-import { AiFillCheckCircle, AiFillGithub } from 'react-icons/ai';
-import { BiLinkExternal } from 'react-icons/bi';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 import './projects.css';
 
 const Projects = () => {
+  const { inView, ref } = useInView();
+  const animationControl = useAnimation();
+
+  if (inView) {
+    animationControl.start({
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        duration: 3,
+        bounce: 0.3,
+      },
+    });
+  }
   return (
-    <div className="portfolio__projects  container" id="projects">
+    <motion.div
+      className="portfolio__projects  container"
+      id="projects"
+      ref={ref}
+      initial={{
+        opacity: 0,
+        y: 100,
+      }}
+      animate={animationControl}
+    >
       <h3>Some Things I’ve Built</h3>
       <div className="portfolio__projects-showcase ">
-        {projectsData.map((project) => (
-          <div key={project.id} className="portfolio__project">
-            <div className="portfolio__project-img">
-              <img src={project.imgUrl} alt="screenshot" />
-            </div>
-            <div className="portfolio__project-content">
-              <h4>{project.title}</h4>
-              <p>{project.description}</p>
-              <ul>
-                {project.technology.map((t, i) => (
-                  <li key={i}>
-                    <AiFillCheckCircle color="#64ffda" size="18" /> {t}
-                  </li>
-                ))}
-              </ul>
-              <div>
-                <a href={project.codeLink} target="_blank" rel="noreferrer">
-                  <AiFillGithub size="35" title="github-icon" />
-                </a>
-                <a href={project.liveLink} target="_blank" rel="noreferrer">
-                  <BiLinkExternal size="35" title="external-link-icon" />
-                </a>
-              </div>
-            </div>
-          </div>
+        {projectsData.map((project, i) => (
+          <Project project={project} duration={i + 3} key={project.id} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
