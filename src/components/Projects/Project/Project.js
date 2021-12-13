@@ -13,7 +13,7 @@ const Project = ({ project, duration }) => {
     animationControl.start({
       opacity: 1,
       y: 0,
-      scale: 1,
+
       transition: {
         type: 'spring',
         duration: duration,
@@ -29,7 +29,6 @@ const Project = ({ project, duration }) => {
       initial={{
         opacity: 0,
         y: 100,
-        scale: 0.5,
       }}
       animate={animationControl}
     >
