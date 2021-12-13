@@ -2,50 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   gap: 3rem;
-
+  background: var(--light-navy);
   padding: 2rem;
   border-radius: 15px;
-  background: var(--color-footer);
-  background: -moz-radial-gradient(
-    circle at 30% -100%,
-    #042c54 25%,
-    rgba(4, 44, 84, 1) 85%,
-    rgba(27, 120, 222, 1) 100%
-  );
-
-  /* safari 5.1+,chrome 10+ */
-  background: -webkit-radial-gradient(
-    circle at 30% -100%,
-    #042c54 25%,
-    rgba(4, 44, 84, 1) 85%,
-    rgba(27, 120, 222, 1) 100%
-  );
-
-  /* opera 11.10+ */
-  background: -o-radial-gradient(
-    circle at 30% -100%,
-    #042c54 25%,
-    rgba(4, 44, 84, 1) 85%,
-    rgba(27, 120, 222, 1) 100%
-  );
-
-  /* ie 10+ */
-  background: -ms-radial-gradient(
-    circle at 30% -100%,
-    #042c54 25%,
-    rgba(4, 44, 84, 1) 85%,
-    rgba(27, 120, 222, 1) 100%
-  );
-
-  /* global 92%+ browsers support */
-  background: radial-gradient(
-    circle at 30% -100%,
-    #042c54 25%,
-    rgba(4, 44, 84, 1) 85%,
-    rgba(27, 120, 222, 1) 100%
-  );
-
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .portfolio__about-content,
@@ -53,17 +12,19 @@
   padding: 2rem;
 }
 
-.portfolio__about-content h3 {
-  font-size: 36px;
-  line-height: 45px;
+.portfolio__about-content h2 {
+  color: var(--green);
+  font-size: 45px;
   font-weight: 800;
   font-family: var(--font-family);
-  max-width: 510px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .portfolio__about-skills h3 {
+  color: var(--slate);
   font-size: 24px;
+  max-width: 80%;
+  padding: 2rem;
 }
 
 .portfolio__about-content p {
@@ -71,7 +32,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
-  color: var(--color-text);
+  color: var(--lightest-slate);
 }
 
 .portfolio__about-skills__iconsContainer {
@@ -84,13 +45,24 @@
 @media screen and (max-width: 1050px) {
   .portfolio__about {
     display: block;
+    padding: 6rem;
   }
   .portfolio__about-skills__iconsContainer {
     padding: 3rem 0;
   }
+  .portfolio__about-content,
+  .portfolio__about-skills {
+    padding: 0;
+  }
+  .portfolio__about-skills h3 {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .portfolio__about {
+    padding: 2rem;
+  }
   .portfolio__about-skills__iconsContainer {
     grid-template-columns: repeat(3, 33.3%);
   }

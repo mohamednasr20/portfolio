@@ -1,33 +1,72 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
+import { motion } from 'framer-motion';
 
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { SiCodewars } from 'react-icons/si';
 import './header.css';
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.75,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { type: 'spring', duration: 3, bounce: 0.3 },
+  },
+};
 
 const Header = () => {
   return (
     <div className="portfolio__header" id="home">
-      <div className="portfolio__header-content scale-up-center">
+      <motion.div
+        className="portfolio__header-content"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div>
-          <h2>Hello, I'm Mohamed Nasr</h2>
-          <h1 className="gradient__text">I'm a Front-End Web Developer</h1>
-          <FaGithub
-            className="portfolio__header-content__icon"
-            color="#81afdd"
-            size="42"
-          />
-          <FaLinkedinIn
-            className="portfolio__header-content__icon"
-            color="#81afdd"
-            size="42"
-          />
-          <FaTwitter
-            className="portfolio__header-content__icon"
-            color="#81afdd"
-            size="42"
-          />
+          <h2>
+            Hello, I'm <span>Mohamed Nasr</span>
+          </h2>
+          <h1>I'm a Front-End Web Developer</h1>
+          <a
+            href="https://github.com/mohamednasr20"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub
+              className="portfolio__header-content__icon"
+              color="#ccd6f6"
+              size="42"
+            />
+          </a>
+          <a
+            href="https://www.codewars.com/users/mohamednasr20"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <SiCodewars
+              className="portfolio__header-content__icon"
+              color="#ccd6f6"
+              size="38"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mohamednasr86"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedinIn
+              className="portfolio__header-content__icon"
+              color="#ccd6f6"
+              size="42"
+            />
+          </a>
         </div>
-      </div>
+      </motion.div>
       <Particles
         id="tsparticles"
         options={{
@@ -63,10 +102,10 @@ const Header = () => {
           },
           particles: {
             color: {
-              value: '#81afdd',
+              value: '#64ffda',
             },
             links: {
-              color: '#81afdd',
+              color: '#64ffda',
               distance: 150,
               enable: true,
               opacity: 0.5,
@@ -88,7 +127,7 @@ const Header = () => {
                 enable: true,
                 value_area: 800,
               },
-              value: 80,
+              value: 40,
             },
             opacity: {
               value: 0.5,

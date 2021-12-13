@@ -1,0 +1,51 @@
+.portfolio__contact {
+  padding: 4rem;
+  text-align: center;
+}
+
+.portfolio__contact h2 {
+  color: var(--green);
+  font-size: 45px;
+  font-weight: 800;
+  font-family: var(--font-family);
+}
+
+.portfolio__contact h4 {
+  color: var(--lightest-slate);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2rem;
+  padding-bottom: 2rem;
+}
+
+.portfolio__contact button {
+  padding: 0.5rem 1rem;
+  color: var(--green);
+  background: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: var(--green) 1px solid;
+  border-radius: 5px;
+}
+
+.portfolio__contact button:hover {
+  background: var(--green);
+  color: var(--navy);
+}
+
+@media screen and (max-width: 1050px) {
+  .portfolio__contact {
+    padding: 6rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .portfolio__contact {
+    padding: 2rem;
+  }
+}

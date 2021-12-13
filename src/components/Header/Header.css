@@ -1,11 +1,4 @@
 .portfolio__header {
-  background: rgba(0, 40, 83, 1);
-  background: radial-gradient(
-    circle at 3% 25%,
-    rgba(0, 40, 83, 1) 0%,
-    rgba(4, 12, 24, 1) 25%
-  );
-
   position: relative;
   height: calc(100vh - 110px);
   width: 100%;
@@ -23,7 +16,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  /* z-index: 8; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,11 +23,12 @@
   width: 100%;
   margin: auto;
   transform: translateY(-90px);
+  z-index: 9;
 }
 
 .portfolio__header-content h1 {
   font-family: var(--font-family);
-  color: var(--color-subtext);
+  color: var(--slate);
   font-weight: 800;
   font-size: 62px;
   line-height: 75px;
@@ -44,10 +37,14 @@
 
 .portfolio__header-content h2 {
   font-family: var(--font-family);
-  color: var(--color-text);
+  color: var(--lightest-slate);
   font-weight: 500;
   font-size: 45px;
   line-height: 65px;
+}
+
+.portfolio__header-content span {
+  color: var(--green);
 }
 
 .portfolio__header-content__icon {
@@ -78,6 +75,6 @@
   }
 
   .portfolio__header-content h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }

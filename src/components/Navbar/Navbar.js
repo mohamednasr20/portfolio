@@ -1,15 +1,37 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { FaMastodon } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import resume from '../../assests/MyResume.pdf';
 import './navbar.css';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.7,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { type: 'spring', duration: 3, bounce: 0.3 },
+    },
+  };
+
   return (
-    <div className="portfolio__navbar gradient__bg">
-      <div className="portfolio__navbar-links container scale-up-center">
+    <motion.div
+      className="portfolio__navbar"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="portfolio__navbar-links container">
         <div className="portfolio__navbar-links_logo">
-          <h3 className="gradient__text">MN</h3>
+          <a href="#home">
+            <FaMastodon color="#64ffda" size="65" />
+          </a>
         </div>
         <div className="portfolio__navbar-links_container">
           <p>
@@ -26,7 +48,11 @@ const Navbar = () => {
           </p>
         </div>
         <div className="portfolio__navbar-resume">
-          <button type="button">Resume</button>
+          <button type="button">
+            <a href={resume} target="_blank" rel="noreferrer">
+              Resuem
+            </a>
+          </button>
         </div>
       </div>
 
@@ -45,7 +71,12 @@ const Navbar = () => {
           />
         )}
         {toggleMenu && (
-          <div className="portfolio__navbar-menu_container scale-up-center">
+          <motion.div
+            className="portfolio__navbar-menu_container"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="portfolio__navbar-menu_container-links">
               <p>
                 <a href="#home">Home</a>
@@ -63,10 +94,10 @@ const Navbar = () => {
             <div className="portfolio__navbar-menu_container-links-resume">
               <button type="button">Resume</button>
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
