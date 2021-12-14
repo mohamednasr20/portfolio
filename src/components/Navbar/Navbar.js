@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="portfolio__navbar-resume">
           <button type="button">
             <a href={resume} target="_blank" rel="noreferrer">
-              Resuem
+              Resume
             </a>
           </button>
         </div>
@@ -92,7 +92,11 @@ const Navbar = () => {
               </p>
             </div>
             <div className="portfolio__navbar-menu_container-links-resume">
-              <button type="button">Resume</button>
+              <button type="button">
+                <a href={resume} target="_blank" rel="noreferrer">
+                  Resume
+                </a>
+              </button>
             </div>
           </motion.div>
         )}
