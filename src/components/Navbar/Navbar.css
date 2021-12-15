@@ -57,7 +57,7 @@
 .portfolio__navbar-menu_container button {
   padding: 0.5rem 1rem;
   color: var(--green);
-  background: none;
+  background: var(--navy);
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 18px;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { FaMastodon } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import resume from '../../assests/MyResume.pdf';
+import resume from '../../assests/myResume.pdf';
 import './navbar.css';
 
 const Navbar = () => {
