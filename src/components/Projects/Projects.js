@@ -30,7 +30,7 @@ const Projects = () => {
       initial={{
         opacity: 0,
         y: 100,
-        scale: 0.5,
+        scale: 0.75,
       }}
       animate={animationControl}
     >
