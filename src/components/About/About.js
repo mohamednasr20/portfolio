@@ -66,7 +66,7 @@ const About = () => {
           </p>
 
           <p>
-            Creative and innovative and some one how enjoys contributing to new
+            Creative and innovative and some one who enjoys contributing to new
             projects. As a developer I understand the importance of form as well
             as function. I take great pride in delevring sites which are
             visually apealling easy to use and quick to load.
