@@ -9,7 +9,14 @@ import {
   FaSass,
   FaNpm,
 } from 'react-icons/fa';
-import { SiRedux, SiExpress, SiMongodb, SiMaterialui } from 'react-icons/si';
+
+import {
+  SiRedux,
+  SiExpress,
+  SiMongodb,
+  SiMaterialui,
+  SiJest,
+} from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import './about.css';
@@ -42,7 +49,8 @@ const About = () => {
     <SiMongodb color="#4DB33D" size="50" />,
     <FaSass color="#CD6799" size="50" />,
     <SiMaterialui color="#007FFF" size="50" />,
-    <FaNpm color="#CC3534" size="50" />,
+    // <FaNpm color="#CC3534" size="50" />,
+    <SiJest color="#8E0047" size="50" />,
   ];
 
   return (
