@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import { FaMastodon } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import resume from '../../assests/Resume.pdf';
-import './navbar.css';
+import React, { useState } from "react";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { FaMastodon } from "react-icons/fa";
+import { motion } from "framer-motion";
+import resume from "../../assests/Resume.pdf";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { type: 'spring', duration: 3, bounce: 0.3 },
+      transition: { type: "spring", duration: 3, bounce: 0.3 },
     },
   };
 
@@ -39,6 +39,9 @@ const Navbar = () => {
           </p>
           <p>
             <a href="#about">About</a>
+          </p>
+          <p>
+            <a href="#work">Work Experience</a>
           </p>
           <p>
             <a href="#projects">Projects</a>

@@ -1,7 +1,7 @@
-import React from 'react';
-import './contact.css';
-import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import React from "react";
+import "./Contact.css";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 
 const Contact = () => {
   const { inView, ref } = useInView();
@@ -12,7 +12,7 @@ const Contact = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         duration: 3,
         bounce: 0.3,
       },

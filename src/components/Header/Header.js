@@ -1,10 +1,10 @@
-import React from 'react';
-import Particles from 'react-tsparticles';
-import { motion } from 'framer-motion';
+import React from "react";
+import Particles from "react-tsparticles";
+import { motion } from "framer-motion";
 
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { SiCodewars } from 'react-icons/si';
-import './header.css';
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { SiCodewars } from "react-icons/si";
+import "./Header.css";
 
 const containerVariants = {
   hidden: {
@@ -14,7 +14,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: 'spring', duration: 3, bounce: 0.3 },
+    transition: { type: "spring", duration: 3, bounce: 0.3 },
   },
 };
 
@@ -31,7 +31,7 @@ const Header = () => {
           <h2>
             Hello, I'm <span>Mohamed Nasr</span>
           </h2>
-          <h1>I'm a Front-End Web Developer</h1>
+          <h1>I'm A Front-End Web Developer</h1>
           <a
             href="https://github.com/mohamednasr20"
             target="_blank"
@@ -76,11 +76,11 @@ const Header = () => {
             events: {
               onClick: {
                 enable: true,
-                mode: 'push',
+                mode: "push",
               },
               onHover: {
                 enable: true,
-                mode: 'repulse',
+                mode: "repulse",
               },
               resize: true,
             },
@@ -102,10 +102,10 @@ const Header = () => {
           },
           particles: {
             color: {
-              value: '#64ffda',
+              value: "#64ffda",
             },
             links: {
-              color: '#64ffda',
+              color: "#64ffda",
               distance: 150,
               enable: true,
               opacity: 0.5,
@@ -115,9 +115,9 @@ const Header = () => {
               enable: true,
             },
             move: {
-              direction: 'none',
+              direction: "none",
               enable: true,
-              outMode: 'bounce',
+              outMode: "bounce",
               random: false,
               speed: 6,
               straight: false,
@@ -133,7 +133,7 @@ const Header = () => {
               value: 0.5,
             },
             shape: {
-              type: 'rectangle',
+              type: "rectangle",
             },
             size: {
               random: true,
