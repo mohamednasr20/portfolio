@@ -33,7 +33,7 @@ const Contact = () => {
       <h4>Want to work together or have any questions?</h4>
       <button>
         <a
-          href="mailto: mohamednasr8687@gmail.com"
+          href="mailto: mnasr@mohamednasr.net"
           target="_blank"
           rel="noreferrer"
         >
