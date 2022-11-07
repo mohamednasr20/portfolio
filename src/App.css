@@ -23,7 +23,6 @@ a {
 }
 .App {
   background: var(--navy);
-  /* max-width: 2000px; */
   margin: auto;
 }
 .container {
