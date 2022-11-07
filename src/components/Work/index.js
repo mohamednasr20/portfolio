@@ -4,7 +4,7 @@ import "./Work.css";
 
 const Work = () => {
   return (
-    <div className="portfolio__Work" id="work">
+    <div className="portfolio__Work container" id="work">
       <h2>Work Experience</h2>
       <h3>
         Front-End Developer, Essential Software & Design{" "}
