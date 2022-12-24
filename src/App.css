@@ -3,11 +3,11 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  background:  background: var(--dark-navy);
+  background: var(--navy);
 }
 
 body {
-  background: var(--dark-navy);
+  background: var(--navy);
 }
 
 ul,

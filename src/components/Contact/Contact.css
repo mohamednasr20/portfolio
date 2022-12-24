@@ -33,7 +33,8 @@
   border-radius: 5px;
 }
 
-.portfolio__contact button:hover {
+.portfolio__contact button:hover,
+.portfolio__contact button:hover a {
   background: var(--green);
   color: var(--navy);
 }

@@ -68,7 +68,12 @@
   border-radius: 5px;
 }
 .portfolio__navbar-resume button:hover,
-.portfolio__navbar-menu_container button:hover {
+.portfolio__navbar-resume button:hover a,
+.portfolio__navbar-menu_container
+  button:hover
+  .portfolio__navbar-menu_container
+  button
+  a:hover {
   background: var(--green);
   color: var(--navy);
 }
